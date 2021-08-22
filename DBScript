@@ -1,0 +1,54 @@
+USE [db_login]
+GO
+
+/****** Object:  Table [dbo].[flogin]    Script Date: 22-Aug-21 5:11:45 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[flogin](
+	[mobileno] [varchar](10) NOT NULL,
+	[Password] [varchar](100) NOT NULL,
+	[ConPassword] [varchar](100) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[mobileno] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
+
+
+USE [db_login]
+GO
+
+/****** Object:  Table [dbo].[CreateFriend]    Script Date: 22-Aug-21 5:12:50 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[CreateFriend](
+	[Id] [numeric](18, 0) IDENTITY(1,1) NOT NULL,
+	[FirstName] [nvarchar](50) NOT NULL,
+	[LastName] [nvarchar](50) NOT NULL,
+	[MobileNo] [nvarchar](10) NOT NULL,
+	[Email] [nvarchar](max) NOT NULL,
+ CONSTRAINT [PK_CreateFriend] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
